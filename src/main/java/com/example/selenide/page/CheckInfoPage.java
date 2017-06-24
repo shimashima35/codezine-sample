@@ -10,6 +10,10 @@ import java.util.Date;
  */
 public class CheckInfoPage extends CheckInfoPageBase {
 
+    public String getErrorCheckResult() {
+        return ErrorCheckResult().text();
+    }
+
     public String getPrice(){
         return Price().val();
     }
@@ -46,12 +50,14 @@ public class CheckInfoPage extends CheckInfoPageBase {
         return GuestName().val();
     }
 
-    public void doCommit(){
+    public FinalConfirmPage doCommit(){
         Commit().click();
+        return new FinalConfirmPage();
     }
 
-    public void doReturnToIndex(){
+    public InputPage doReturnToIndex(){
         ReturnToIndex().click();
+        return new InputPage();
     }
 
 }

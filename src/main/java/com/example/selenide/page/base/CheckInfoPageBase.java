@@ -11,47 +11,51 @@ import static com.codeborne.selenide.Selenide.$;
  */
 public abstract class CheckInfoPageBase {
 
-    protected SelenideElement Price(){
+    protected SelenideElement ErrorCheckResult() {
+        return $("#errorcheck_result");
+    }
+
+    protected SelenideElement Price() {
         return $("#price");
     }
 
-    protected SelenideElement DateFrom(){
+    protected SelenideElement DateFrom() {
         return $("#datefrom");
     }
 
-    protected SelenideElement DateTo(){
+    protected SelenideElement DateTo() {
         return $("#dateto");
     }
 
-    protected SelenideElement Dayscount(){
+    protected SelenideElement Dayscount() {
         return $("#dayscount");
     }
 
-    protected SelenideElement Hc(){
+    protected SelenideElement Hc() {
         return $("#hc");
     }
 
-    protected SelenideElement BfOrder(){
+    protected SelenideElement BfOrder() {
         return $("#bf_order");
     }
 
-    protected SelenideElement PlanAOrder(){
+    protected SelenideElement PlanAOrder() {
         return $("#plan_a_order");
     }
 
-    protected SelenideElement PlanBOrder(){
+    protected SelenideElement PlanBOrder() {
         return $("#plan_b_order");
     }
 
-    protected SelenideElement GuestName(){
+    protected SelenideElement GuestName() {
         return $("#guestname");
     }
 
-    protected SelenideElement Commit(){
+    protected SelenideElement Commit() {
         return $("#commit");
     }
 
-    protected SelenideElement ReturnToIndex(){
+    protected SelenideElement ReturnToIndex() {
         return $("#returnto_index");
     }
 

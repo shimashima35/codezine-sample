@@ -12,47 +12,47 @@ import static com.codeborne.selenide.Condition.*;
  */
 public abstract class InputPageBase {
 
-    protected SelenideElement ReserveYear(){
+    protected SelenideElement ReserveYear() {
         return $("#reserve_year");
     }
 
-    protected SelenideElement ReserveMonth(){
+    protected SelenideElement ReserveMonth() {
         return $("#reserve_month");
     }
 
-    protected SelenideElement ReserveDay(){
+    protected SelenideElement ReserveDay() {
         return $("#reserve_day");
     }
 
-    protected SelenideElement ReserveTerm(){
+    protected SelenideElement ReserveTerm() {
         return $("#reserve_term");
     }
 
-    protected SelenideElement Headcount(){
+    protected SelenideElement Headcount() {
         return $("#headcount");
     }
 
-    protected SelenideElement BreakfastOn(){
+    protected SelenideElement BreakfastOn() {
         return $("#breakfast_on");
     }
 
-    protected SelenideElement BreakfastOff(){
+    protected SelenideElement BreakfastOff() {
         return $("#breakfast_off");
     }
 
-    protected SelenideElement PlanA(){
+    protected SelenideElement PlanA() {
         return $("#plan_a");
     }
 
-    protected SelenideElement PlanB(){
+    protected SelenideElement PlanB() {
         return $("#plan_b");
     }
 
-    protected SelenideElement GuestName(){
-        return $("#plan_a");
+    protected SelenideElement GuestName() {
+        return $("#guestname");
     }
 
-    protected SelenideElement GotoNext(){
+    protected SelenideElement GotoNext() {
         return $("#goto_next");
     }
 }

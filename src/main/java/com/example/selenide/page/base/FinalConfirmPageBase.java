@@ -10,10 +10,13 @@ import static com.codeborne.selenide.Selenide.$;
  */
 public abstract class FinalConfirmPageBase {
 
+    protected SelenideElement ErrorCheckResult() {
+        return $("#errorcheck_result");
+    }
 
-   protected SelenideElement ReturnToCheckInfo(){
-      return $("#returnto_checkInfo");
-   }
+    protected SelenideElement ReturnToCheckInfo() {
+        return $("#returnto_checkInfo");
+    }
 
 
 }
