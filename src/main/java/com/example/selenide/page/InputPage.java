@@ -93,7 +93,7 @@ public class InputPage extends InputPageBase {
 
     public CheckInfoPage clickGotoNext() {
         GotoNext().click();
-        return new CheckInfoPage();
+        return page(CheckInfoPage.class);
     }
 
 }

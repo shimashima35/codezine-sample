@@ -5,6 +5,8 @@ import com.example.selenide.page.base.CheckInfoPageBase;
 
 import java.util.Date;
 
+import static com.codeborne.selenide.Selenide.page;
+
 /**
  * Created by shima on 2017/06/18.
  */
@@ -52,12 +54,12 @@ public class CheckInfoPage extends CheckInfoPageBase {
 
     public FinalConfirmPage doCommit(){
         Commit().click();
-        return new FinalConfirmPage();
+        return page(FinalConfirmPage.class);
     }
 
     public InputPage doReturnToIndex(){
         ReturnToIndex().click();
-        return new InputPage();
+        return page(InputPage.class);
     }
 
 }
