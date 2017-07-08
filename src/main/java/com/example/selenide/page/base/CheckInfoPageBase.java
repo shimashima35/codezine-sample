@@ -48,7 +48,7 @@ public abstract class CheckInfoPageBase {
     }
 
     protected SelenideElement GuestName() {
-        return $("#guestname");
+        return $("#gname");
     }
 
     protected SelenideElement Commit() {

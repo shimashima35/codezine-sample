@@ -17,39 +17,39 @@ public class CheckInfoPage extends CheckInfoPageBase {
     }
 
     public String getPrice(){
-        return Price().val();
+        return Price().text();
     }
 
     public String getDateFrom(){
-        return DateFrom().val();
+        return DateFrom().text();
     }
 
     public String getDateTo(){
-        return DateTo().val();
+        return DateTo().text();
     }
 
     public String getDaysCount(){
-        return Dayscount().val();
+        return Dayscount().text();
     }
 
     public String getHeadcount(){
-        return Hc().val();
+        return Hc().text();
     }
 
     public String getBfOrder(){
-        return BfOrder().val();
+        return BfOrder().text();
     }
 
     public String getPlanAOrder(){
-        return PlanAOrder().val();
+        return PlanAOrder().text();
     }
 
     public String getPlanBOrder(){
-        return PlanBOrder().val();
+        return PlanBOrder().text();
     }
 
     public String getGuestName(){
-        return GuestName().val();
+        return GuestName().text();
     }
 
     public FinalConfirmPage doCommit(){
