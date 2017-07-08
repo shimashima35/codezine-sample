@@ -11,6 +11,8 @@ import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.*;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.*;
 
 /**
  * Unit test for simple App.
@@ -22,6 +24,30 @@ public class SampleTest {
         Configuration.browser = WebDriverRunner.MARIONETTE;
         //Configuration.browser = "edge";
         System.setProperty("webdriver.gecko.driver","C:/Users/shima/bin/geckodriver.exe");
+    }
+
+    @Test
+    public void 正常系確認() {
+        InputPage inputPage = open("http://example.selenium.jp/reserveApp/", InputPage.class);
+        inputPage.setReserveYear("2017");
+        inputPage.setReserveMonth("10");
+        inputPage.setReserveDay("1");
+        inputPage.setReserveTerm("2");
+        inputPage.setBreakfastOn();
+        inputPage.setGuestName("東京太郎");
+        inputPage.setPlanA(false);
+        inputPage.setPlanA(false);
+        CheckInfoPage checkPage = inputPage.clickGotoNext();
+        assertThat(checkPage.getErrorCheckResult(), is(""));
+        assertThat(checkPage.getDateFrom(), is("2017年10月1日"));
+        assertThat(checkPage.getDateTo(), is("2017年10月3日"));
+        assertThat(checkPage.getDaysCount(), is("2"));
+        assertThat(checkPage.getHeadcount(), is("1"));
+        assertThat(checkPage.getBfOrder(), is("あり"));
+        assertThat(checkPage.getGuestName(), is("東京太郎"));
+        assertThat(checkPage.getPrice(), is("17750"));
+        FinalConfirmPage finalPage = checkPage.doCommit();
+        assertThat(finalPage.getErrorCheckResult(), is(""));
     }
 
     @Test
