@@ -23,7 +23,7 @@ public class SampleTest {
     public void before(){
         Configuration.browser = WebDriverRunner.GECKO;
         //Configuration.browser = "edge";
-        System.setProperty("webdriver.gecko.driver","C:/Users/shima/bin/geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver","/PATH/TO/geckodriver.exe");
     }
 
     @Test
