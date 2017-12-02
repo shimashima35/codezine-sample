@@ -22,7 +22,6 @@ public class SampleTest {
 
     @Before
     public void before(){
-        FirefoxDriverManager.getInstance().setup();
         Configuration.browser = WebDriverRunner.GECKO;
     }
 
