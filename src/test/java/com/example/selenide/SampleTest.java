@@ -6,6 +6,7 @@ import com.codeborne.selenide.WebDriverRunner;
 import com.example.selenide.page.CheckInfoPage;
 import com.example.selenide.page.FinalConfirmPage;
 import com.example.selenide.page.InputPage;
+import io.github.bonigarcia.wdm.FirefoxDriverManager;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,9 +22,8 @@ public class SampleTest {
 
     @Before
     public void before(){
+        FirefoxDriverManager.getInstance().setup();
         Configuration.browser = WebDriverRunner.GECKO;
-        //Configuration.browser = "edge";
-        System.setProperty("webdriver.gecko.driver","/PATH/TO/geckodriver.exe");
     }
 
     @Test
